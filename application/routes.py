@@ -82,7 +82,7 @@ def post():
 		db.session.commit()
 		return redirect(url_for('home'))
 	else:
-		print form.errors
+		print (form.errors)
 	return render_template('post.html', title='Post', form=form)
 
 @app.route("/logout")
